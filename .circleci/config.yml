@@ -1,12 +1,19 @@
 version: 2.1
 orbs:
-  trivy: lansweeper/trivy@1.0.0
+  trivy: gotooooo/trivy@0.0.2
 jobs:
-  scan-image:
-    machine: true
+  build:
+    docker:
+      - image: 'cimg/base:stable'
     steps:
-      - checkout
-      - trivy/install
-      - trivy/scan:
-          image: 'myimage:tag'
-workflows: null
+      - setup_remote_docker
+      - trivy/scan_an_image:
+          exit-code: 1
+          image: 'nginx:latest'
+          no-progress: true
+          severity: 'HIGH,CRITICAL'
+workflows:
+  use-my-orb:
+    jobs:
+      - build
+    
