@@ -9,7 +9,7 @@ jobs:
       - setup_remote_docker
       - trivy/scan_an_image:
           exit-code: 1
-          image: 'redis:latest'
+          image: 'node:latest'
           no-progress: true
           severity: 'HIGH,CRITICAL,MEDIUM,LOW'
 workflows:
