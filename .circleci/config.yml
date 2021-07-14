@@ -11,7 +11,7 @@ jobs:
           exit-code: 1
           image: 'node'
           no-progress: true
-          severity: 'HIGH,CRITICAL,MEDIUM,LOW'
+          severity: 'HIGH,CRITICAL,MEDIUM'
 workflows:
   use-my-orb:
     jobs:
