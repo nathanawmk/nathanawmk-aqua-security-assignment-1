@@ -10,8 +10,8 @@ jobs:
       - trivy/scan_an_image:
           exit-code: 1
           image: 'node'
-          no-progress: true
-          severity: 'CRITICAL'
+          no-progress: false
+          severity: 'HIGH,CRITICAL,MEDIUM,LOW'
 workflows:
   use-my-orb:
     jobs:
