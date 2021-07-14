@@ -1,4 +1,4 @@
-version: 2.1
+sversion: 2.1
 orbs:
   trivy: gotooooo/trivy@0.0.2
 jobs:
@@ -9,7 +9,7 @@ jobs:
       - setup_remote_docker
       - trivy/scan_an_image:
           exit-code: 1
-          image: 'alpine:latest'
+          image: 'redis:latest'
           no-progress: true
           severity: 'HIGH,CRITICAL,MEDIUM,LOW'
 workflows:
