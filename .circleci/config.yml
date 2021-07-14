@@ -1,12 +1,3 @@
-version: '2.1'
+version: 2.1
 orbs:
-  trivy: lansweeper/trivy@x.y.z
-jobs:
-  scan-image:
-    machine: true
-    steps:
-      - checkout
-      - trivy/install
-      - trivy/scan:
-          image: 'myimage:tag'
-workflows: null
+  trivy: lansweeper/trivy@1.0.0
