@@ -9,9 +9,9 @@ jobs:
       - setup_remote_docker
       - trivy/scan_an_image:
           exit-code: 1
-          image: 'node:10'
+          image: 'alphine:latest'
           no-progress: true
-          severity: 'HIGH,CRITICAL'
+          severity: 'HIGH,CRITICAL,MEDIUM'
 workflows:
   use-my-orb:
     jobs:
