@@ -9,7 +9,7 @@ jobs:
       - setup_remote_docker
       - trivy/scan_an_image:
           exit-code: 1
-          image: 'node'
+          image: 'alpine'
           no-progress: true
           severity: 'HIGH,CRITICAL,MEDIUM'
 workflows:
