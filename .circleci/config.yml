@@ -10,7 +10,7 @@ jobs:
       - trivy/scan_an_image:
           exit-code: 1
           image: 'nginx'
-          no-progress: false
+          no-progress: true
           severity: 'HIGH,CRITICAL,MEDIUM'
 workflows:
   use-my-orb:
