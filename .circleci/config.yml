@@ -11,7 +11,7 @@ jobs:
           exit-code: 1
           image: 'alpine'
           no-progress: true
-          severity: 'HIGH,CRITICAL,MEDIUM'
+          severity: 'HIGH,CRITICAL'
 workflows:
   use-my-orb:
     jobs:
